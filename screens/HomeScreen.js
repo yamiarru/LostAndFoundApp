@@ -1,11 +1,12 @@
-import React from 'react';
-import { View, StyleSheet, Dimensions } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
+import { View, StyleSheet, Dimensions } from "react-native";
+// import MapView, { Marker } from 'react-native-maps';
+import MapView from "react-native-maps";
 
 export const HomeScreen = () => {
   return (
     <View style={styles.container}>
-      <MapView
+      <MapView style={styles.map} />
+      {/* <MapView
         style={styles.map}
         initialRegion={{
           latitude: -38.0055,
@@ -16,7 +17,7 @@ export const HomeScreen = () => {
       >
         <Marker coordinate={{ latitude: -38.0055, longitude: -57.5426 }} pinColor="blue" />
         <Marker coordinate={{ latitude: -38.01, longitude: -57.54 }} pinColor="violet" />
-      </MapView>
+      </MapView> */}
     </View>
   );
 };
@@ -24,10 +25,14 @@ export const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8f6f1',
+    backgroundColor: "#f8f6f1",
   },
   map: {
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height,
+    width: "100%",
+    height: "100%",
   },
+  // map: {
+  //   width: Dimensions.get('window').width,
+  //   height: Dimensions.get('window').height,
+  // },
 });
